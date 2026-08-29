@@ -1,0 +1,53 @@
+@import url(reset.css);
+
+body{
+	font-family: "Fredoka" ,sans-serif;
+	background-color: plum;
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	padding-block: 20px;
+	color: limegreen;
+	text-align: center;
+}
+
+.title{
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.sub-title{
+	font-size: 30px;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.dog-image{
+	max-width: 300px;
+	width: 100%;
+	cursor: pointer;
+	user-select: none;
+	transition: transform 0.1s ease;
+}
+
+.dog-image:active{
+	transform: scale(0.92);
+}
+
+.dog-click-count {
+	width: 100%;
+	text-align: center;
+	padding: 10px 50px;
+	border: 3px solid #000;
+	border-radius: 20px;
+}
+
