@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateUI() {
         clickCountDisplay.textContent = clickCount;
 
-        if (clickCount >= 500) {
+        if (clickCount >= 5000) {
+            dogImage.src = "img/lvl6.png";
+		} else if (clickCount >= 1000) {
+            dogImage.src = "img/lvl5.png";
+		} else if (clickCount >= 500) {
             dogImage.src = "img/lvl4.png";
         } else if (clickCount >= 100) {
             dogImage.src = "img/lvl3.png";
@@ -19,9 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.dog-image').addEventListener('click', function() {
 
-        if (clickCount >= 500) {
-            clickCount += 4;
-        } else if (clickCount >= 100) {
+        if (clickCount >= 5000) {
+            clickCount += 20;
+        } else if (clickCount >= 1000) {
+            clickCount += 10;
+		} else if (clickCount >= 500) {
+            clickCount += 5;
+		} else if (clickCount >= 100) {
             clickCount += 3;
         } else if (clickCount >= 10) {
             clickCount += 2;
