@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (clickCount >= 5000) {
             dogImage.src = "img/lvl6.png";
-		} else if (clickCount >= 1000) {
+        } else if (clickCount >= 1000) {
             dogImage.src = "img/lvl5.png";
-		} else if (clickCount >= 500) {
+        } else if (clickCount >= 500) {
             dogImage.src = "img/lvl4.png";
         } else if (clickCount >= 100) {
             dogImage.src = "img/lvl3.png";
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
             clickCount += 20;
         } else if (clickCount >= 1000) {
             clickCount += 10;
-		} else if (clickCount >= 500) {
+        } else if (clickCount >= 500) {
             clickCount += 5;
-		} else if (clickCount >= 100) {
+        } else if (clickCount >= 100) {
             clickCount += 3;
         } else if (clickCount >= 10) {
             clickCount += 2;
@@ -39,4 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         updateUI();
     });
+
+    updateUI();
 });

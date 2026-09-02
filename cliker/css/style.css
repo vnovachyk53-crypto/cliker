@@ -52,27 +52,3 @@ main{
 	border-radius: 20px;
 }
 
-ul li:first-child {
-    font-size: 20px; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
-}
-
-ul li:last-child {
-    margin-top: 10px; 
-}
-
-ul li {
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    background-color: #f9f9f9;
-    margin-bottom: 5px; 
-}
-
-ul li:nth-child(2) {
-    background-color: #dfe6e9; 
-}
-
-ul li:nth-child(3) {
-    background-color: #ebf5f0; 
-}
