@@ -3,7 +3,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const clickCountDisplay = document.querySelector('.dog-click-count');
     const dogImage = document.querySelector('.dog-image img');
+    const resetButton = document.querySelector('.reset-button');
     let clickCount = 0;
+
+    clickCount = parseInt(localStorage.getItem('clickCount')) || 0;
 
     function updateUI() {
         clickCountDisplay.textContent = clickCount;
@@ -18,11 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
             dogImage.src = "img/lvl3.png";
         } else if (clickCount >= 10) {
             dogImage.src = "img/lvl2.png";
-        }
+        }else {
+			dogImage.src = "img/lvl1.png";
+		}
+		
     }
 
     document.querySelector('.dog-image').addEventListener('click', function() {
+        incrementClickCount();
+    });
 
+    resetButton.addEventListener('click', function() {
+        clickCount = 0;
+        updateUI();
+        localStorage.removeItem('clickCount');
+    });
+
+    function incrementClickCount() {
         if (clickCount >= 5000) {
             clickCount += 20;
         } else if (clickCount >= 1000) {
@@ -38,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         updateUI();
-    });
+        localStorage.setItem('clickCount', clickCount);
+    }
 
     updateUI();
 });
